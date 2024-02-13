@@ -115,6 +115,8 @@ STORAGES = {
     "default": {
         "BACKEND": "storages.backends.s3.S3Storage",
         "OPTIONS": {
+            'access_key': env('AWS_S3_ACCESS_KEY_ID'),
+            'secret_key': env('AWS_S3_SECRET_ACCESS_KEY'),
             'bucket_name': env('AWS_STORAGE_BUCKET_NAME'),
             'region_name': env('AWS_S3_REGION_NAME')
         },
